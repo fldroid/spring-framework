@@ -13,9 +13,9 @@ import java.sql.SQLException;
  * CreateTime 2019/08/16
  * describe:
  */
-public class UserRowMapper implements RowMapper {
+public class UserRowMapper implements RowMapper<User> {
     @Nullable
-    public Object mapRow(ResultSet resultSet, int i) throws SQLException {
+    public User mapRow(ResultSet resultSet, int i) throws SQLException {
         User user=new User();
         user.setId(resultSet.getInt("id"));
         user.setName(resultSet.getString("name"));
